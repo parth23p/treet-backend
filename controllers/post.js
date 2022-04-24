@@ -21,7 +21,7 @@ module.exports.getPosts = async (request, response, next) => {
       if (!sortByValues.includes(sortBy)) {
         return response
           .status(400)
-          .json({ success: false, error: "sortBy parameter is invalid" });
+          .json({ error: "sortBy parameter is invalid" });
       }
     } else {
       sortBy = "id";
@@ -33,7 +33,7 @@ module.exports.getPosts = async (request, response, next) => {
       if (!directionValues.includes(direction)) {
         return response
           .status(400)
-          .json({ success: false, error: "direction parameter is invalid" });
+          .json({ error: "Direction parameter is invalid" });
       }
     } else {
       direction = "asc";
